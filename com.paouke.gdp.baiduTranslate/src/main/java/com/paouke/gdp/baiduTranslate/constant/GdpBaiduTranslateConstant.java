@@ -19,7 +19,7 @@ public class GdpBaiduTranslateConstant {
     //操作符分割符
     public static final String OPERATION_DELIMITER = ":";
     //是否为操作符匹配正则
-    public static final String OPERATION_REGEX = "\\[((en)|(zh)|(jp)|(\\?))->((en)|(zh)|(jp)|(\\?))\\]";
+    public static final String OPERATION_REGEX = "\\[((en)|(zh)|(jp)|(kor)|(wyw)|(ru)|(de)|(yue)|(cht)|(\\?))->((en)|(zh)|(jp)|(kor)|(wyw)|(ru)|(de)|(yue)|(cht)|(\\?))\\]";
 
     public static final String JSON_KEY_LANG_DETECT_ERROR = "error";
     public static final String JSON_KEY_LANG_DETECT_MSG = "msg";

@@ -16,6 +16,6 @@ public class BaiduTranslateMain {
     }
     @Test
     public void testFunc_DoTranslate() {
-        System.out.println(new BaiduTranslateService().doTranslate("[jp->en]:あなたのことが好きです"));
+        System.out.println(new BaiduTranslateService().doTranslate("[zh->wyw]:你好"));
     }
 }
