@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.geronimo.bundles:commons-httpclient:3.1_2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/bundles/commons-httpclient/3.1_2/commons-httpclient-3.1_2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/bundles/commons-httpclient/3.1_2/commons-httpclient-3.1_2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/bundles/commons-httpclient/3.1_2/commons-httpclient-3.1_2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

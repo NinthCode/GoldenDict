@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.baiduTranslate/com.paouke.gdp.baiduTranslate.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.baiduTranslate/com.paouke.gdp.baiduTranslate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.baike/com.paouke.gdp.baike.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.baike/com.paouke.gdp.baike.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.common/com.paouke.gdp.common.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.common/com.paouke.gdp.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.online/com.paouke.gdp.online.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.online/com.paouke.gdp.online.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gdp.iml" filepath="$PROJECT_DIR$/gdp.iml" />
+    </modules>
+  </component>
+</project>
