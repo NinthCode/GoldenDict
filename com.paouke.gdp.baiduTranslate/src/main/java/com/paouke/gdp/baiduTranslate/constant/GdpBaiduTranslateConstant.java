@@ -13,7 +13,7 @@ public class GdpBaiduTranslateConstant {
 
     //语言类型
     public enum LangType {
-        en, zh, jp
+        en, zh, jp, kor, wyw, ru, de, yue, cht
     }
 
     //操作符分割符
@@ -31,7 +31,7 @@ public class GdpBaiduTranslateConstant {
     public static final String JSON_KEY_V2TRANSAPI_PHONETIC = "phonetic";
     public static final String JSON_KEY_V2TRANSAPI_KEYWORDS = "keywords";
     public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT = "dict_result";
-    public static final String JSON_KEY_V2TRANSAPI_LIJU_RESULT= "liju_result";
+    public static final String JSON_KEY_V2TRANSAPI_LIJU_RESULT = "liju_result";
 
     public static final String ENGINE_NAME = "百度翻译";
 }

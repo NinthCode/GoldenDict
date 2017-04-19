@@ -14,16 +14,16 @@ public class TokenizerHelper {
         String words = wordsInfoBean.getWords();
         String[] wordArray = words.split(GdpBaiduTranslateConstant.OPERATION_DELIMITER);
         String source = wordArray[0];
-        if(Pattern.matches(GdpBaiduTranslateConstant.OPERATION_REGEX, source)) {
-            source = source.replaceAll("[\\[\\]]","");
+        if (Pattern.matches(GdpBaiduTranslateConstant.OPERATION_REGEX, source)) {
+            source = source.replaceAll("[\\[\\]]", "");
             String[] langs = source.split("->");
-            if(langs.length == 2) {
+            if (langs.length == 2) {
                 try {
-                    if(!"?".equals(langs[0])) {
+                    if (!"?".equals(langs[0])) {
                         wordsInfoBean.setSourceLangType(GdpBaiduTranslateConstant.LangType.valueOf(langs[0]));
                         wordsInfoBean.setIsForceLangType(true);
                     }
-                    if(!"?".equals(langs[1])){
+                    if (!"?".equals(langs[1])) {
                         wordsInfoBean.setPurposeLangType(GdpBaiduTranslateConstant.LangType.valueOf(langs[1]));
                         wordsInfoBean.setIsForceLangType(true);
                     }
@@ -31,7 +31,7 @@ public class TokenizerHelper {
                     e.getMessage();
                 }
             }
-            if(wordsInfoBean.isForceLangType()) {
+            if (wordsInfoBean.isForceLangType()) {
                 wordsInfoBean.setWords(wordArray[1]);
             }
         }
@@ -48,14 +48,14 @@ public class TokenizerHelper {
             sb.deleteCharAt(sb.length() - 1);
         } else {
             sb.append(words);
-            if(words.getBytes().length > 20) {
+            if (sb.length() > 20) {
                 sb.delete(20, sb.length());
             }
         }
         wordsInfoBean.setWordsAbstract(sb.toString());
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         WordsInfoBean wordsInfoBean = new WordsInfoBean();
         TokenizerHelper tokenizerHelper = new TokenizerHelper();
         wordsInfoBean.setWords("[en->zh]:hello world");
