@@ -5,5 +5,8 @@ package com.paouke.gdp.common.utils;
  */
 public class LogUtil {
     public static void out(String log) {
+
+    }
+    public static void log(String log) {
     }
 }
