@@ -39,7 +39,7 @@ public class GdpCommonConstant {
             "</body>\n" +
             "</html>\n";
 
-    public static final String REGEX_TEMP_P_ENGINE = "\\#\\[engine\\]\\#";
-    public static final String REGEX_TEMP_P_SRC = "\\#\\[src\\]\\#";
-    public static final String REGEX_TEMP_P_DST = "\\#\\[dst\\]\\#";
+    public static final String REGEX_TEMP_P_ENGINE = "#\\[engine\\]#";
+    public static final String REGEX_TEMP_P_SRC = "#\\[src\\]#";
+    public static final String REGEX_TEMP_P_DST = "#\\[dst\\]#";
 }

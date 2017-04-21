@@ -39,4 +39,8 @@ public final class StringUtils extends org.apache.commons.lang.StringUtils {
 	public static final String HTTP_TYPES="application/json";  
 	public static final String HTTP_TYPES_TEXT="text/xml";  
 	public static final String HTTP_CODES="UTF-8";
+
+	public static String tropeSlashAnddollar(String src){
+		return src.replaceAll("\\\\", "\\\\\\\\").replaceAll("\\$","\\\\\\$");
+	}
 }
