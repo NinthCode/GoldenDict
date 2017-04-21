@@ -45,12 +45,11 @@ public class TokenizerHelper {
             for (int i = 0; i < wordArray.length && i < 6; i++) {
                 sb.append(wordArray[i]).append("+");
             }
-            sb.deleteCharAt(sb.length() - 1);
         } else {
             sb.append(words);
-            if (sb.length() > 20) {
-                sb.delete(20, sb.length());
-            }
+        }
+        if (sb.length() > 20) {
+            sb.delete(20, sb.length());
         }
         wordsInfoBean.setWordsAbstract(sb.toString());
     }

@@ -16,6 +16,6 @@ public class BaiduTranslateMain {
     }
     @Test
     public void testFunc_DoTranslate() {
-        System.out.println(new BaiduTranslateService().doTranslate("10086会回复你：尊敬的客户,您好!您正在点播由中国红十字会公司提供的捐款2业务,信息费2.0元/条,(不含通信费,由中国移动代收费"));
+        System.out.println(new BaiduTranslateService().doTranslate("hello\n world"));
     }
 }
