@@ -34,4 +34,9 @@ public class GdpBaiduTranslateConstant {
     public static final String JSON_KEY_V2TRANSAPI_LIJU_RESULT = "liju_result";
 
     public static final String ENGINE_NAME = "百度翻译";
+
+    //语言类型识别取样长度阈值
+    public static final int CONF_RUN_LANG_DETECT_LENGTH = 40;
+    //语言类型识别分词类型辞数阈值
+    public static final int CONF_RUN_LANG_DETECT_APPRECIATION_WORD_NUM = 3;
 }
