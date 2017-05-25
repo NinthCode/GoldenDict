@@ -51,11 +51,10 @@ public class TokenizerHelper {
                 }
                 sb.append(wordArray[i]);
             }
-            if(sb.length() == 0) {
-                sb.append(words.toCharArray(), 0, GdpBaiduTranslateConstant.CONF_RUN_LANG_DETECT_LENGTH);
-            }
-        } else {
-            sb.append(words.toCharArray(), 0, GdpBaiduTranslateConstant.CONF_RUN_LANG_DETECT_LENGTH);
+        }
+        if(sb.length() == 0) {
+            sb.append(words.toCharArray(), 0, words.length() < GdpBaiduTranslateConstant.CONF_RUN_LANG_DETECT_LENGTH ?
+                    words.length() : GdpBaiduTranslateConstant.CONF_RUN_LANG_DETECT_LENGTH);
         }
         wordsInfoBean.setWordsAbstract(sb.toString());
     }
