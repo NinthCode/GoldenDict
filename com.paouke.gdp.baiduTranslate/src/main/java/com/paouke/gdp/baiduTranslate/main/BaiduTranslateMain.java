@@ -9,6 +9,9 @@ import org.junit.Test;
 public class BaiduTranslateMain {
     public static void main(String[] args){
         if(args.length >= 1) {
+            if("?".equals(args[0])) {
+                System.out.println("Help");
+            }
             System.out.println(new BaiduTranslateService().doTranslate(args[0]));
         } else {
             System.out.println("null");
