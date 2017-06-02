@@ -32,6 +32,17 @@ public class GdpBaiduTranslateConstant {
     public static final String JSON_KEY_V2TRANSAPI_KEYWORDS = "keywords";
     public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT = "dict_result";
     public static final String JSON_KEY_V2TRANSAPI_LIJU_RESULT = "liju_result";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_SIMPLE_MEANS = "simple_means";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_FROM = "from";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_WORD_NAME = "word_name";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_WORD_MEANS = "word_means";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_TAGS = "tags";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_CORE = "core";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_OTHER = "other";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_EXCHANGE = "exchange";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_SYMBOLS = "symbols";
+    public static final String JSON_KEY_V2TRANSAPI_DICT_RESULT_PARTS = "parts";
+
 
     public static final String ENGINE_NAME = "百度翻译";
 
