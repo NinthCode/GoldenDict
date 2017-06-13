@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.annotate/com.paouke.gdp.annotate.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.annotate/com.paouke.gdp.annotate.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.baiduTranslate/com.paouke.gdp.baiduTranslate.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.baiduTranslate/com.paouke.gdp.baiduTranslate.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.baike/com.paouke.gdp.baike.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.baike/com.paouke.gdp.baike.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.common/com.paouke.gdp.common.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.common/com.paouke.gdp.common.iml" />

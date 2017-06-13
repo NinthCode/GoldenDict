@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com.paouke.gdp.online</artifactId>
-    <!--<packaging>jar</packaging>-->
+    <artifactId>com.paouke.gdp.annotate</artifactId>
 
     <dependencies>
         <dependency>
@@ -61,6 +60,11 @@
             <groupId>org.apache.geronimo.bundles</groupId>
             <artifactId>commons-httpclient</artifactId>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -72,7 +76,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.paouke.gdp.online.main.BaikeMain</mainClass>
+                            <mainClass>com.paouke.gdp.annotate.main.AnnotateMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
