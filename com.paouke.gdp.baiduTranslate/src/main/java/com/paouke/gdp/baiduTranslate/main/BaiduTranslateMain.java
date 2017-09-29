@@ -22,6 +22,6 @@ public class BaiduTranslateMain {
     }
     @Test
     public void testFunc_DoTranslate() {
-        System.out.println(new BaiduTranslateService().doTranslate("Microsoft Unveils Special Version of Windows 10 For Chinese Government"));
+        System.out.println(new BaiduTranslateService().doTranslate("Microsoft hello"));
     }
 }
