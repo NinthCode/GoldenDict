@@ -24,7 +24,7 @@ public class YoudaoTranslateService {
                             HtmlResultHelper.easyResultHtmlCreater(GdpYoudaoTranslateConstant.ENGINE_NAME, words,
                                     dictResultBean.getTranslation().getString(0)) :
                             HtmlResultHelper.complexResultHtmlCreater(GdpYoudaoTranslateConstant.ENGINE_NAME,
-                                    DictResultDisposeHelper.disposeResultToDictShowBean(dictResultBean))) :
+                                    DictResultDisposeHelper.disposeResultToDictShowBean(wordsInfoBean, dictResultBean))) :
                     "查询失败: " + GdpYoudaoTranslateConstant.ERROR_CODE_MAP.get(dictResultBean.getErrorCode());
         } catch (Exception e) {
             return "查询失败: " + e.getMessage();
