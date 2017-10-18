@@ -11,6 +11,7 @@
         <module name="com.paouke.gdp.baike" />
         <module name="com.paouke.gdp.common" />
         <module name="com.paouke.gdp.online" />
+        <module name="com.paouke.gdp.youdaoTranslate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,8 +20,10 @@
       <module name="com.paouke.gdp.baike" target="1.7" />
       <module name="com.paouke.gdp.common" target="1.7" />
       <module name="com.paouke.gdp.online" target="1.7" />
+      <module name="com.paouke.gdp.youdaoTranslate" target="1.7" />
       <module name="gdp" target="1.7" />
       <module name="gg" target="1.7" />
+      <module name="youdaoTranslate" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

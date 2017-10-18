@@ -15,6 +15,7 @@
         <module>com.paouke.gdp.common</module>
         <module>com.paouke.gdp.baiduTranslate</module>
         <module>com.paouke.gdp.annotate</module>
+        <module>com.paouke.gdp.youdaoTranslate</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -77,6 +78,19 @@
                 <version>3.18.0</version>
                 <scope>test</scope>
             </dependency>
+            <!--JODD 支持包-->
+            <dependency>
+                <groupId>org.jodd</groupId>
+                <artifactId>jodd-core</artifactId>
+                <version>3.9.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jodd</groupId>
+                <artifactId>jodd-http</artifactId>
+                <version>3.9.1</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>

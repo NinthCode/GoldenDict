@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.baike/com.paouke.gdp.baike.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.baike/com.paouke.gdp.baike.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.common/com.paouke.gdp.common.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.common/com.paouke.gdp.common.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.online/com.paouke.gdp.online.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.online/com.paouke.gdp.online.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.paouke.gdp.youdaoTranslate/com.paouke.gdp.youdaoTranslate.iml" filepath="$PROJECT_DIR$/com.paouke.gdp.youdaoTranslate/com.paouke.gdp.youdaoTranslate.iml" />
       <module fileurl="file://$PROJECT_DIR$/gdp.iml" filepath="$PROJECT_DIR$/gdp.iml" />
     </modules>
   </component>

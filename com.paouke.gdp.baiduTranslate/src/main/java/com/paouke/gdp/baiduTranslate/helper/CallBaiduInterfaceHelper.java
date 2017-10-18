@@ -8,8 +8,6 @@ import com.paouke.gdp.baiduTranslate.bean.V2transapiBean;
 import com.paouke.gdp.baiduTranslate.bean.WordsInfoBean;
 import com.paouke.gdp.baiduTranslate.constant.GdpBaiduTranslateConstant;
 import com.paouke.gdp.common.utils.HttpClientUtil;
-
-import java.awt.*;
 import java.net.URLEncoder;
 
 /**

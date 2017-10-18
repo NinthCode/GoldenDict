@@ -1,13 +1,11 @@
 package com.paouke.gdp.baiduTranslate.service;
 
-import com.alibaba.fastjson.JSONObject;
 import com.paouke.gdp.baiduTranslate.bean.LangDetectBean;
 import com.paouke.gdp.baiduTranslate.bean.V2transapiBean;
 import com.paouke.gdp.baiduTranslate.bean.WordsInfoBean;
 import com.paouke.gdp.baiduTranslate.constant.GdpBaiduTranslateConstant;
 import com.paouke.gdp.baiduTranslate.helper.CallBaiduInterfaceHelper;
 import com.paouke.gdp.baiduTranslate.helper.TokenizerHelper;
-import com.paouke.gdp.common.constant.GdpCommonConstant;
 import com.paouke.gdp.common.helper.HtmlResultHelper;
 
 /**
