@@ -1,5 +1,10 @@
 # GoldenDict翻译插件(已加入百度翻译、有道翻译)
-## 百度翻译GoldenDict插件帮助文档
+## 构建文档
+- 首先需要给common模块执行install命令安装Jar到本地
+- 然后对要构建的项目执行package assembly:single打Jar包
+## 使用文档
+
+### 百度翻译GoldenDict插件帮助文档
 
 ---
 
@@ -31,7 +36,7 @@
 | yue  |  粤语  |
 | cht  |  繁体  |
 
-## 有道翻译GoldenDict插件帮助文档
+### 有道翻译GoldenDict插件帮助文档
 
 ---
 有道翻译插件在第一次使用时，会在Jar包目录下生成一个配置文件，内如如下：
