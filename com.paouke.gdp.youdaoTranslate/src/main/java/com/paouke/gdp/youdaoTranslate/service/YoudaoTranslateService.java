@@ -7,6 +7,7 @@ import com.paouke.gdp.youdaoTranslate.bean.DictResultBean;
 import com.paouke.gdp.youdaoTranslate.bean.WordsInfoBean;
 import com.paouke.gdp.youdaoTranslate.constant.GdpYoudaoTranslateConstant;
 import com.paouke.gdp.youdaoTranslate.helper.CallYoudaoApiHelper;
+import com.paouke.gdp.youdaoTranslate.helper.DictResultDisposeHelper;
 
 /**
  * Created by nicot on 17-10-18.
@@ -22,7 +23,8 @@ public class YoudaoTranslateService {
                     (configBean.isEasy() ?
                             HtmlResultHelper.easyResultHtmlCreater(GdpYoudaoTranslateConstant.ENGINE_NAME, words,
                                     dictResultBean.getTranslation().getString(0)) :
-                            "暂不支持") :
+                            HtmlResultHelper.complexResultHtmlCreater(GdpYoudaoTranslateConstant.ENGINE_NAME,
+                                    DictResultDisposeHelper.disposeResultToDictShowBean(dictResultBean))) :
                     "查询失败: " + GdpYoudaoTranslateConstant.ERROR_CODE_MAP.get(dictResultBean.getErrorCode());
         } catch (Exception e) {
             return "查询失败: " + e.getMessage();

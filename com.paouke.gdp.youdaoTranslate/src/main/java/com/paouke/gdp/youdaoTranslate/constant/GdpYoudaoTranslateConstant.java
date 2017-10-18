@@ -39,4 +39,9 @@ public class GdpYoudaoTranslateConstant {
 
     public static final String ENGINE_NAME = "有道翻译";
 
+    public static final String JSON_KEY_RESULT_BASIC_US_PHONETIC = "us-phonetic";
+    public static final String JSON_KEY_RESULT_BASIC_UK_PHONETIC = "uk-phonetic";
+    public static final String JSON_KEY_RESULT_BASIC_EXPLAINS = "explains";
+    public static final String JSON_KEY_RESULT_KEY = "key";
+    public static final String JSON_KEY_RESULT_VALUE = "value";
 }
