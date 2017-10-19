@@ -16,6 +16,7 @@
         <module>com.paouke.gdp.baiduTranslate</module>
         <module>com.paouke.gdp.annotate</module>
         <module>com.paouke.gdp.youdaoTranslate</module>
+        <module>com.paouke.gdp.googleTranslate</module>
     </modules>
     <dependencyManagement>
         <dependencies>
