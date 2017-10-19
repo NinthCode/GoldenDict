@@ -32,8 +32,8 @@ public class YoudaoTranslateMain {
     @Test
     public void test_translate() {
         ConfigBean configBean = new ConfigBean();
-        configBean.setAppKey("153d831b2e4e3a5c");
-        configBean.setSecretKey("WkTfel3GNY1S42JK3TWcbWtTLCC1ELvp");
+        configBean.setAppKey("");
+        configBean.setSecretKey("");
         configBean.setEasy(false);
         System.out.println(new YoudaoTranslateService().doTranslate("sb", configBean));
     }
