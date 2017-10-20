@@ -53,16 +53,18 @@ D:\GoldenDict\Dict\baiduTranslate.jar是你的翻译插件的路径。
 {
   "appKey": "",
   "easy": false,
-  "secretKey": ""
+  "secretKey": "",
+  "devMode":false
 }
 ```
-其中appKey与secretKey需要申请有道智云翻译服务才可以获得，申请方式：
+1. 其中appKey与secretKey需要申请有道智云翻译服务才可以获得，申请方式：
 - 注册有道智云帐号并登录到控制台页面
 - 创建一个翻译实例：控制台 > 自然语言翻译 > 翻译实例 > 创建翻译实例
 - 创建一个应用并绑定翻译服务：控制台 > 应用管理 > 我的应用 > 创建应用 > 绑定服务
 - 在插件中绑定应用——将上步骤的应用和应用密钥填写到插件设置页中相应的位置：Preferences(Settings) > [Other Settings] > Translation > 有道翻译
 有道云智地址：http://ai.youdao.com
-easy字段：true:简单模式，只提供简单的释义，false：复杂模式，可以输出详细释义
+2. easy字段：true:简单模式，只提供简单的释义，false：复杂模式，可以输出详细释义
+3. devMode字段，设置为true开启开发者模式，会把变量名拆分。
 
 ### google翻译GoldenDict插件帮助文档
 

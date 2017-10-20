@@ -10,6 +10,9 @@ public class ConfigBean {
     //是否简单模式
     private boolean easy;
 
+    //开发者模式
+    private boolean devMode = false;
+
     public String getAppKey() {
         return appKey;
     }
@@ -32,5 +35,13 @@ public class ConfigBean {
 
     public void setEasy(boolean easy) {
         this.easy = easy;
+    }
+
+    public boolean isDevMode() {
+        return devMode;
+    }
+
+    public void setDevMode(boolean devMode) {
+        this.devMode = devMode;
     }
 }

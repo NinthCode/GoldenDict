@@ -2,6 +2,7 @@ package com.paouke.gdp.youdaoTranslate.service;
 
 import com.alibaba.fastjson.JSON;
 import com.paouke.gdp.common.helper.HtmlResultHelper;
+import com.paouke.gdp.common.utils.StringUtils;
 import com.paouke.gdp.youdaoTranslate.bean.ConfigBean;
 import com.paouke.gdp.youdaoTranslate.bean.DictResultBean;
 import com.paouke.gdp.youdaoTranslate.bean.WordsInfoBean;
@@ -16,7 +17,7 @@ public class YoudaoTranslateService {
 
     public String doTranslate(String words, ConfigBean configBean) {
         WordsInfoBean wordsInfoBean = new WordsInfoBean();
-        wordsInfoBean.setWords(words);
+        wordsInfoBean.setWords(configBean.isDevMode() ? StringUtils.splitWord(words) : words);
         try {
             DictResultBean dictResultBean = CallYoudaoApiHelper.CallTranslateApi(wordsInfoBean, configBean);
             return GdpYoudaoTranslateConstant.KEY_YOUDAO_CODE_NORMAL.equals(dictResultBean.getErrorCode()) ?

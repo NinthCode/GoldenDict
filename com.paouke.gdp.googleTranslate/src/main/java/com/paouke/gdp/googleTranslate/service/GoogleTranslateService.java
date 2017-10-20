@@ -1,6 +1,7 @@
 package com.paouke.gdp.googleTranslate.service;
 
 import com.paouke.gdp.common.helper.HtmlResultHelper;
+import com.paouke.gdp.common.utils.StringUtils;
 import com.paouke.gdp.googleTranslate.bean.ConfigBean;
 import com.paouke.gdp.googleTranslate.bean.DictResultBean;
 import com.paouke.gdp.googleTranslate.bean.WordsInfoBean;
@@ -15,7 +16,7 @@ public class GoogleTranslateService {
 
     public String doTranslate(String words) {
         WordsInfoBean wordsInfoBean = new WordsInfoBean();
-        wordsInfoBean.setWords(words);
+        wordsInfoBean.setWords(GdpGoogleTranslateConstant.CONFIG.get().isDevMode() ? StringUtils.splitWord(words) : words);
         try {
             wordsInfoBean.setToken(GoogleTokenHelper.calcToken(wordsInfoBean));
             DictResultBean dictResultBean = CallGoogleApiHelper.callTranslateApi(wordsInfoBean);

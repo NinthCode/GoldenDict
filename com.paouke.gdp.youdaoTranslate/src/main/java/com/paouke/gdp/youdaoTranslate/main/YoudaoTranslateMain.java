@@ -35,6 +35,6 @@ public class YoudaoTranslateMain {
         configBean.setAppKey("");
         configBean.setSecretKey("");
         configBean.setEasy(false);
-        System.out.println(new YoudaoTranslateService().doTranslate("sb", configBean));
+        System.out.println(new YoudaoTranslateService().doTranslate("CamelCase", configBean));
     }
 }

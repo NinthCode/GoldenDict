@@ -1,25 +1,5 @@
 package com.paouke.gdp.common.utils;
 
-import org.apache.commons.io.IOUtils;
-
-import java.io.*;
-import java.lang.reflect.Method;
-import java.math.BigDecimal;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
-import java.util.zip.ZipOutputStream;
-
-
 public final class StringUtils extends org.apache.commons.lang.StringUtils {
 	private static final String TIME_FORMAT_SHORT = "yyyyMMddHHmmss";
 	private static final String TIME_FORMAT_NORMAL = "yyyy-MM-dd HH:mm:ss";
@@ -42,5 +22,17 @@ public final class StringUtils extends org.apache.commons.lang.StringUtils {
 
 	public static String tropeSlashAnddollar(String src){
 		return src.replaceAll("\\\\", "\\\\\\\\").replaceAll("\\$","\\\\\\$");
+	}
+
+	public static String splitWord(String input) {
+		if (isEmptyOrBlankString(input))
+			return input;
+
+		return input.replaceAll("[_*\\s]+", " ").replaceAll("([A-Z][a-z]+)|([0-9\\W]+)", " $0 ")
+				.replaceAll("[A-Z]{2,}", " $0").replaceAll("\\s{2,}", " ").trim();
+	}
+
+	public static boolean isEmptyOrBlankString(String str) {
+		return null == str || str.trim().isEmpty();
 	}
 }

@@ -1,6 +1,7 @@
 package com.paouke.gdp.youdaoTranslate.constant;
 
 import java.util.HashMap;
+import java.util.regex.Pattern;
 
 public class GdpYoudaoTranslateConstant {
 
@@ -44,4 +45,10 @@ public class GdpYoudaoTranslateConstant {
     public static final String JSON_KEY_RESULT_BASIC_EXPLAINS = "explains";
     public static final String JSON_KEY_RESULT_KEY = "key";
     public static final String JSON_KEY_RESULT_VALUE = "value";
+
+    //词性字符串
+    public static final Pattern PATTERN_EXPLAIN =
+            Pattern.compile("(^(a|adj|prep|pron|n|v|conj|s|sc|o|oc|vi|vt|aux|ad|adv|art|num|int|u|c|pl|abbr)\\.)(.+)");
+    public static final int     GROUP_CLASS     = 1;
+    public static final int     GROUP_EXPLAIN   = 3;
 }

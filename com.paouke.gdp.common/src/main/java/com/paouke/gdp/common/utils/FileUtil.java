@@ -41,10 +41,10 @@ public class FileUtil {
         Reader reader = null;
         try {
             reader = new InputStreamReader(new FileInputStream(file), charsetName == null ? "UTF-8" : charsetName);
-            char[] chars = new char[100];
+            int tempChar;
             StringBuilder sb = new StringBuilder();
-            while (reader.read(chars) != -1) {
-                sb.append(chars);
+            while ((tempChar = reader.read()) != -1) {
+                sb.append((char)tempChar);
             }
             return sb.toString();
         } catch (Exception e) {

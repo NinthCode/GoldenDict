@@ -8,6 +8,9 @@ public class ConfigBean {
     //TKK
     private String Tkk;
 
+    //开发者模式
+    private boolean devMode = false;
+
     public boolean isEasy() {
         return easy;
     }
@@ -22,5 +25,13 @@ public class ConfigBean {
 
     public void setTkk(String tkk) {
         Tkk = tkk;
+    }
+
+    public boolean isDevMode() {
+        return devMode;
+    }
+
+    public void setDevMode(boolean devMode) {
+        this.devMode = devMode;
     }
 }
