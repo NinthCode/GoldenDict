@@ -10,11 +10,8 @@
     <version>1.0</version>
 
     <modules>
-        <module>com.paouke.gdp.online</module>
-        <module>com.paouke.gdp.baike</module>
         <module>com.paouke.gdp.common</module>
         <module>com.paouke.gdp.baiduTranslate</module>
-        <module>com.paouke.gdp.annotate</module>
         <module>com.paouke.gdp.youdaoTranslate</module>
         <module>com.paouke.gdp.googleTranslate</module>
     </modules>
@@ -86,9 +83,17 @@
                 <artifactId>jodd-http</artifactId>
                 <version>3.9.1</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

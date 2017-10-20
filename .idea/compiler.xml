@@ -6,12 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="com.paouke.gdp.annotate" />
         <module name="com.paouke.gdp.baiduTranslate" />
-        <module name="com.paouke.gdp.baike" />
         <module name="com.paouke.gdp.common" />
         <module name="com.paouke.gdp.googleTranslate" />
-        <module name="com.paouke.gdp.online" />
         <module name="com.paouke.gdp.youdaoTranslate" />
       </profile>
     </annotationProcessing>

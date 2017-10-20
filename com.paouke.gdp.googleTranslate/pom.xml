@@ -17,29 +17,6 @@
             <artifactId>com.paouke.gdp.common</artifactId>
             <version>1.0</version>
         </dependency>
-
-        <!--JODD 支持包-->
-        <dependency>
-            <groupId>org.jodd</groupId>
-            <artifactId>jodd-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jodd</groupId>
-            <artifactId>jodd-http</artifactId>
-        </dependency>
-
-        <!--FastJson支持包-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
     </dependencies>
 
     <build>
