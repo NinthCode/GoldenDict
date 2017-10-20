@@ -48,14 +48,18 @@ public class CallGoogleApiHelper {
         } else {
             JSONArray JARes = JSONArray.parseArray(httpResponse.bodyText());
             if(JARes != null && JARes.size() >= 3) {
-                JSONArray JATranRes = JARes.getJSONArray(0);
                 dictResultBean.setSourceLangType(JARes.getString(2));
-                if(JATranRes != null && JATranRes.size() >= 1) {
-                    JSONArray JATran = JATranRes.getJSONArray(0);
-                    if(JATran != null && JATran.size() >= 2) {
-                        dictResultBean.setQuery(JATran.getString(1));
-                        dictResultBean.setTranslation(JATran.getString(0));
+                JSONArray JATrans = JARes.getJSONArray(0);
+                if(JATrans != null) {
+                    StringBuilder querySb = new StringBuilder();
+                    StringBuilder tranSb = new StringBuilder();
+                    for(int i = 0; i < JATrans.size() - 1; i++) {
+                        JSONArray JATran = JATrans.getJSONArray(i);
+                        querySb.append(JATran.getString(1));
+                        tranSb.append(JATran.getString(0));
                     }
+                    dictResultBean.setQuery(querySb.toString());
+                    dictResultBean.setTranslation(tranSb.toString());
                 }
             } else {
                 throw new RuntimeException("处理错误！");

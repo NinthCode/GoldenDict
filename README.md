@@ -4,6 +4,15 @@
 - 然后对要构建的项目执行package assembly:single打Jar包
 ## 使用文档
 
+### 插件用法
+- 依次选择GoldenDict词典的编辑->词典->程序->添加
+- 类型选择HTML
+- 名称随意，然后命令行处添加，比如你想添加百度翻译插件，就输入以下命令：
+```
+java -jar -Dfile.encoding=utf-8 D:\GoldenDict\Dict\baiduTranslate.jar %GDWORD%
+```
+D:\GoldenDict\Dict\baiduTranslate.jar是你的翻译插件的路径。
+
 ### 百度翻译GoldenDict插件帮助文档
 
 ---
@@ -54,3 +63,8 @@
 - 在插件中绑定应用——将上步骤的应用和应用密钥填写到插件设置页中相应的位置：Preferences(Settings) > [Other Settings] > Translation > 有道翻译
 有道云智地址：http://ai.youdao.com
 easy字段：true:简单模式，只提供简单的释义，false：复杂模式，可以输出详细释义
+
+### google翻译GoldenDict插件帮助文档
+
+- 首先，你需要能上“网”
+- 其次，没什么可以配置的。
