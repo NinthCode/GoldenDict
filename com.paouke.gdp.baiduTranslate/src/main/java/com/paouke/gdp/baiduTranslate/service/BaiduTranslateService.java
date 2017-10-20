@@ -7,6 +7,7 @@ import com.paouke.gdp.baiduTranslate.constant.GdpBaiduTranslateConstant;
 import com.paouke.gdp.baiduTranslate.helper.CallBaiduInterfaceHelper;
 import com.paouke.gdp.baiduTranslate.helper.TokenizerHelper;
 import com.paouke.gdp.common.helper.HtmlResultHelper;
+import com.paouke.gdp.common.utils.StringUtils;
 
 /**
  * Created by nicot on 17-4-14.
@@ -16,7 +17,7 @@ public class BaiduTranslateService {
     public String doTranslate(String words) {
         WordsInfoBean wordsInfoBean = new WordsInfoBean();
         TokenizerHelper tokenizerHelper = new TokenizerHelper();
-        wordsInfoBean.setWords(words);
+        wordsInfoBean.setWords(StringUtils.splitWord(words));
         TokenizerHelper.extractOper(wordsInfoBean);
         TokenizerHelper.extractAbst(wordsInfoBean);
         if(!wordsInfoBean.isForceLangType()) {
