@@ -35,6 +35,12 @@ public class HtmlResultHelper {
     }
 
     private static String buildPhonetic(String uk, String us) {
+        if(uk == null) {
+            uk = "未知";
+        }
+        if(us == null) {
+            us = "未知";
+        }
         return GdpCommonConstant.COMPLEX_HTML_PHONETIC_TEMPLATE.replaceAll(GdpCommonConstant.REGEX_TEMP_P_PHONETIC, StringUtils.tropeSlashAnddollar("英:[" + uk + "],美:[" + us + "]"));
     }
 
@@ -44,8 +50,13 @@ public class HtmlResultHelper {
         }
         StringBuilder sb = new StringBuilder();
         for(String key : explains.keySet()) {
-            sb.append(GdpCommonConstant.COMPLEX_HTML_MEAN_TEMPLATE.replaceAll(GdpCommonConstant.REGEX_TEMP_P_KEY, StringUtils.tropeSlashAnddollar(key))
-                    .replaceAll(GdpCommonConstant.REGEX_TEMP_P_VALUE, explains.get(key)));
+            if("".equals(explains.get(key))) {
+                sb.append(GdpCommonConstant.COMPLEX_HTML_MEAN_TEMPLATE.replaceAll(GdpCommonConstant.REGEX_TEMP_P_KEY, "")
+                        .replaceAll(GdpCommonConstant.REGEX_TEMP_P_VALUE, StringUtils.tropeSlashAnddollar(key)));
+            } else {
+                sb.append(GdpCommonConstant.COMPLEX_HTML_MEAN_TEMPLATE.replaceAll(GdpCommonConstant.REGEX_TEMP_P_KEY, StringUtils.tropeSlashAnddollar(key))
+                        .replaceAll(GdpCommonConstant.REGEX_TEMP_P_VALUE, StringUtils.tropeSlashAnddollar(explains.get(key))));
+            }
         }
         return sb.toString();
     }
