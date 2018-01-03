@@ -28,7 +28,17 @@ public class RandomUtil {
 	public static String getTimeMixRandomCodeMixDataMd5(int randomCodeLength, Object data){
 		return MD5Util.md5(getTimeMixRandomCode(randomCodeLength) + data.toString());
 	}
-	
+
+	public static long random(long begin, long end) {
+		long rtn = begin + (long) (Math.random() * (end - begin));
+		// 如果返回的是开始时间和结束时间，则递归调用本函数查找随机值
+		if (rtn == begin || rtn == end) {
+			return random(begin, end);
+		}
+		return rtn;
+	}
+
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(getTimeMixRandomCode(3));

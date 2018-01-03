@@ -1,7 +1,7 @@
 package com.paouke.gdp.baiduTranslate.service;
 
+import com.paouke.gdp.baiduTranslate.bean.DictResultBean;
 import com.paouke.gdp.baiduTranslate.bean.LangDetectBean;
-import com.paouke.gdp.baiduTranslate.bean.V2transapiBean;
 import com.paouke.gdp.baiduTranslate.bean.WordsInfoBean;
 import com.paouke.gdp.baiduTranslate.constant.GdpBaiduTranslateConstant;
 import com.paouke.gdp.baiduTranslate.helper.CallBaiduInterfaceHelper;
@@ -16,8 +16,7 @@ public class BaiduTranslateService {
 
     public String doTranslate(String words) {
         WordsInfoBean wordsInfoBean = new WordsInfoBean();
-        TokenizerHelper tokenizerHelper = new TokenizerHelper();
-        wordsInfoBean.setWords(StringUtils.splitWord(words));
+        wordsInfoBean.setWords(GdpBaiduTranslateConstant.CONFIG.get().isDevMode() ? StringUtils.splitWord(words) : words);
         TokenizerHelper.extractOper(wordsInfoBean);
         TokenizerHelper.extractAbst(wordsInfoBean);
         if(!wordsInfoBean.isForceLangType()) {
@@ -33,8 +32,10 @@ public class BaiduTranslateService {
                 return "";
             }
         }
-        V2transapiBean v2transapiBean = CallBaiduInterfaceHelper.callV2transapiInterface(wordsInfoBean);
-        String result = HtmlResultHelper.easyResultHtmlCreater(GdpBaiduTranslateConstant.ENGINE_NAME, v2transapiBean.getSource(), v2transapiBean.getDestination());
-        return v2transapiBean.getError() == 0 ? result : v2transapiBean.getMsg();
+        DictResultBean dictResultBean = CallBaiduInterfaceHelper.callV2transapiInterface(wordsInfoBean);
+        if(dictResultBean.getErrorCode() != null) {
+            return "翻译失败，error code：" + dictResultBean.getErrorCode();
+        }
+        return HtmlResultHelper.easyResultHtmlCreater(GdpBaiduTranslateConstant.ENGINE_NAME, dictResultBean.getSrc(), dictResultBean.getDst());
     }
 }

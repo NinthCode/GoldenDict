@@ -41,9 +41,9 @@ public class TokenizerHelper {
         String words = wordsInfoBean.getWords();
         String[] wordArray = words.split(" ");
         StringBuffer sb = new StringBuffer();
-        if (wordArray.length > GdpBaiduTranslateConstant.CONF_RUN_LANG_DETECT_APPRECIATION_WORD_NUM) {
+        if (wordArray.length > GdpBaiduTranslateConstant.CONFIG.get().getLangDetectAppreciationWordNum()) {
             for (int i = 0; i < wordArray.length; i++) {
-                if(sb.length() + wordArray[i].length() + 1 > GdpBaiduTranslateConstant.CONF_RUN_LANG_DETECT_LENGTH) {
+                if(sb.length() + wordArray[i].length() + 1 > GdpBaiduTranslateConstant.CONFIG.get().getLangDetectLength()) {
                     break;
                 }
                 if(sb.length() != 0) {
@@ -53,17 +53,9 @@ public class TokenizerHelper {
             }
         }
         if(sb.length() == 0) {
-            sb.append(words.toCharArray(), 0, words.length() < GdpBaiduTranslateConstant.CONF_RUN_LANG_DETECT_LENGTH ?
-                    words.length() : GdpBaiduTranslateConstant.CONF_RUN_LANG_DETECT_LENGTH);
+            sb.append(words.toCharArray(), 0, words.length() < GdpBaiduTranslateConstant.CONFIG.get().getLangDetectLength() ?
+                    words.length() : GdpBaiduTranslateConstant.CONFIG.get().getLangDetectLength());
         }
         wordsInfoBean.setWordsAbstract(sb.toString());
-    }
-
-    public static void main(String[] args) {
-        WordsInfoBean wordsInfoBean = new WordsInfoBean();
-        TokenizerHelper tokenizerHelper = new TokenizerHelper();
-        wordsInfoBean.setWords("[en->zh]:hello world");
-        tokenizerHelper.extractOper(wordsInfoBean);
-        System.out.println(JSON.toJSONString(wordsInfoBean));
     }
 }

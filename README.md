@@ -16,8 +16,23 @@ D:\GoldenDict\Dict\baiduTranslate.jar是你的翻译插件的路径。
 ### 百度翻译GoldenDict插件帮助文档
 
 ---
-
+首次使用
+百度翻译插件在第一次使用时，会在Jar包目录下生成一个配置文件，内如如下：
+```json
+{
+  "appId": null,
+  "appKey": null,
+  "devMode": true,
+  "langDetectAppreciationWordNum": 3,
+  "langDetectLength": 40
+}
+```
+1. 其中appId与appKey需要注册成为百度翻译开放平台开发者才可以获得：
+百度翻译开放平台地址：http://api.fanyi.baidu.com/api/trans/product/index
+2. devMode字段，设置为true开启开发者模式，会把变量名拆分。
 常规使用
+3. langDetectLength，语言类型识别取样长度阈值（不需要设置）
+4. langDetectAppreciationWordNum，单词数量阈值（不需要设置）
 
 正常使用时，将需要翻译的非中文字（词）或一段文字（词）输入，即可自动识别并翻译为中文，如果输入为中文，则会输出英文翻译。
 
@@ -25,7 +40,6 @@ D:\GoldenDict\Dict\baiduTranslate.jar是你的翻译插件的路径。
 
 - 使用如下方式来指定源语言类型a与目标语言类型b
       [a->b]:待翻译词语
-
 - 使用如下方式来指定源语言类型a
       [a->?]:待翻译词语
 - 使用如下方式来指定目标语言类型b
